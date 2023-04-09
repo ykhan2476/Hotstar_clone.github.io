@@ -1,0 +1,263 @@
+<html>
+    <head>
+        <title>hotstarClone.com</title>
+        <script>
+            window.onload= function(){
+            var i=0;
+            var t=0;
+            var img=["images/p2.png","images/p3.png","images/p4.png","images/p1.png","images/p5.png","images/p6.png","images/p7.png"];
+            function change_img(){
+                  document.getElementById("p").src=img[i];
+                i++;
+                if(i>=img.length){
+                    i=0;
+                }
+                 }
+            window.setInterval(change_img,3000);
+
+            var img2=["images/b2.png","images/b3.png","images/b4.png","images/b1.png","images/b5.png"];
+            function change_b(){
+                  document.getElementById("b").src=img2[t];
+                t++;
+                if(t>=img2.length){
+                    t=0;
+                }
+                 }
+            window.setInterval(change_b,6000);
+        }
+       const videocards=[...document.querySelectorAll('.cont3')];
+         videocards.forEach(item=>{
+              item.addEventListener('onmouseover',()=>{
+                let vid=item.children[1];
+                vid.play();
+              })
+              item.addEventListener('mouseleave',()=>{
+                let vid=item.children[1];
+                vid.pause();
+              })
+         })
+        </script>
+        <script src="container.js"></script>
+        <style>
+            .d1{height: 2000px;width:120px;float: left;background-color: rgb(0,10,22);position: fixed;}
+            .d2{height:2000px;width:1375px;float: right;}
+            body{background-color: rgb(0,10,22);}
+            .n1{height:90px ;width:120px ;margin-top: 15px;position: relative;}
+            .n2{height:60px ;width:120px;position:relative ;}
+            .icons{height: 25px;width:25px; margin-left: 35px;}
+            #btn{border-radius: 15px;color: rgb(221, 177, 88);background-color: rgb(52, 41, 41);height: 27px;outline: none;padding-bottom:2px;
+                margin-left: 10px;margin-top: 2px;border: none;width: auto;}
+            .images1{height:280px;width:1375px}
+            .images2{height:700px;width:1375px ;position: sticky;position: -webkit-sticky;top:0;}
+            .container{height: 1250px;width:1375px;z-index: 5;position: absolute;background-color:rgb(0,10,22) ;}
+            #p{z-index:0;height:100%;width: 100%;position: sticky;position: -webkit-sticky;}
+            #b{margin-top: 10px;height:90%;width: 100%;border-top-left-radius: 10px ;border-bottom-left-radius: 10px;}
+            #i1{float: left;width:660px;}
+            #i2{float:right;width:714px;height: 228px;margin-top: 10px;}
+            #d50{float: left; height: 30px; width: 50px;padding-left:20px;padding-top: 40px;}
+            #d664{float: right;height: 50px; width: 635px;}
+            img{border-radius: 5px;height: 95%;width: 95%;}
+            p{color:grey;margin:0%;}
+            h3{color:white;margin-top:40px;margin-bottom: 0px;}
+            #h4{color:white;height:150px ;width:714px ;margin-top: 100px;padding-left: 20px;}
+            #btn2{height: 50px;width:200px;padding:5px;color:white;background-color:rgba(82, 84, 82, 0.601);border-radius: 8px;border:none;font-size: larger;}
+            #btn2:hover{height: 55px;width:210px;padding:0%;}
+            h2{color:white;font-family:Lucida Sans;font-weight: lighter;font-size:large;}
+            .cont1{height:250px ;width:196px;position: relative;border-radius: 5px;float: left}
+            .cont2{height:150px ;width:275px;border-radius: 5px;float: left}
+            .cont3,.video{height:100px ;width:228px;border-radius: 5px;float: left}
+            .cont4{height:155px ;width:275px;border-radius: 5px;float: left}
+            .cont5{height:100px ;width:342px;border-radius: 5px;float: left}
+            .video{position: relative;display: none;}
+            .img-v,.video{border-radius: 5px;height: 95%;width: 95%;}
+            .cont3 :hover.img-v{display: none;}
+           div#p{position: sticky;position: -webkit-sticky;top:0;}
+          #br{height: 20px;width: 100%;}
+          .gradient{height:25% ;width:100%;z-index: 5;background: linear-gradient(to bottom,rgb(0,10,22));position:absolute;margin-top: 550px;}
+          #b3,#b4{height:50px;color:white;border-radius: 10px;z-index: 6;position: relative;background-color: rgba(82, 84, 82, 0.601);
+            border-style: none;}  
+          
+        </style>
+    </head>
+    <body >
+        <div>
+            <div class="d1">
+             <div class="n1"><img src="images/logo.png" height="75px" width="110px"><button id="btn">Subscribe ></button></div>
+             <div class="n1"></div>
+             <div class="n2"><img src="images/icon1.png" class="icons"></div>
+             <div class="n2"><img src="images/icon2.png" class="icons"></div>
+             <div class="n2"><img src="images/icon3.png" class="icons"></div>
+             <div class="n2"><img src="images/icon4.png" class="icons"></div>
+             <div class="n2"><img src="images/icon5.png" class="icons"></div>
+             
+            </div>
+            <div class="d2">
+            <div class="images1">
+                <div id="i1"><img src="images/b1.png" id="b"></div>
+                <div id="i2">
+                    <div height="50px" width="714px">
+                        <div  id="d50"><img src="images/disney.png" height="50px" width="50px" ></div>
+                        <div  id="d664"><h3>Disney + Hotstar</h3>
+                            <p>Binge-worthy Watchlist.</p></div>
+                    </div>
+                    <div id="h4"><h4>Your one-stop destination for Comedy, Drama, Thrillers<br>& more!</h4>
+                    <button id="btn2">Subscribe</button></div>
+                </div>
+            </div>
+            <div class="images2">
+               <div class="gradient">
+                  <div>
+                  <button id="b3" style="width: 250px;font-size: 15px;margin-left: 10px;">WATCH NOW</button>
+                  <button id="b4"style="width: 50px;font-size:20px;margin-left: 11px;scale:2em">+</button>
+                  </div>
+               </div>
+               <img src="images/p1.png" id="p" alt=img2[i]>
+            </div>
+            <div class="container">
+             <div>
+                <h2>Latest & Trending</h2>
+                <div class="cont1"><img src="images/c1.png"></div>
+                <div class="cont1"><img src="images/c2.png"></div>
+                <div class="cont1"><img src="images/c3.png"></div>
+                <div class="cont1"><img src="images/c4.png"></div>
+                <div class="cont1"><img src="images/c5.png"></div>
+                <div class="cont1"><img src="images/c6.png"></div>
+                <div class="cont1"><img src="images/c7.png"></div>
+             </div>
+             <div>
+                <h2>New on Hotstar</h2>
+                <div class="cont1"><img src="images/c8.png" ></div>
+                <div class="cont1"><img src="images/c9.png"></div>
+                <div class="cont1"><img src="images/c10.png"></div>
+                <div class="cont1"><img src="images/d1.png"></div>
+                <div class="cont1"><img src="images/d2.png"></div>
+                <div class="cont1"><img src="images/d3.png"></div>
+                <div class="cont1"><img src="images/d4.png"></div>
+             </div>
+             <div>
+                <h2>Popular Shows</h2>
+                <div class="cont1"><img src="images/d5.png" ></div>
+                <div class="cont1"><img src="images/d6.png"></div>
+                <div class="cont1"><img src="images/d7.png"></div>
+                <div class="cont1"><img src="images/d8.png"></div>
+                <div class="cont1"><img src="images/d9.png"></div>
+                <div class="cont1"><img src="images/d10.png"></div>
+                <div class="cont1"><img src="images/d11.png"></div>
+             </div>
+             <div>
+                <h2>New & Upcoming</h2>
+                <div class="cont1"><img src="images/e1.png" ></div>
+                <div class="cont1"><img src="images/e2.png"></div>
+                <div class="cont1"><img src="images/e3.png"></div>
+                <div class="cont1"><img src="images/e4.png"></div>
+                <div class="cont1"><img src="images/e5.png"></div>
+                <div class="cont1"><img src="images/e6.png"></div>
+                <div class="cont1"><img src="images/e7.png"></div>
+             </div>
+             <div>
+                <h2>Movies Recommended For You</h2>
+                <div class="cont1"><img src="images/m1.png" ></div>
+                <div class="cont1"><img src="images/m2.png"></div>
+                <div class="cont1"><img src="images/m3.png"></div>
+                <div class="cont1"><img src="images/m4.png"></div>
+                <div class="cont1"><img src="images/m5.png"></div>
+                <div class="cont1"><img src="images/m6.png"></div>
+                <div class="cont1"><img src="images/m7.png"></div>
+             </div>
+             <div>
+                <h2>Shows Recommended For You</h2>
+                <div class="cont1"><img src="images/s1.png" ></div>
+                <div class="cont1"><img src="images/s2.png"></div>
+                <div class="cont1"><img src="images/s3.png"></div>
+                <div class="cont1"><img src="images/s4.png"></div>
+                <div class="cont1"><img src="images/s5.png"></div>
+                <div class="cont1"><img src="images/s6.png"></div>
+                <div class="cont1"><img src="images/s7.png"></div>
+             </div>
+             <div>
+                <h2>Popoular Movies</h2>
+                <div class="cont1"><img src="images/f1.png" ></div>
+                <div class="cont1"><img src="images/f2.png"></div>
+                <div class="cont1"><img src="images/f3.png"></div>
+                <div class="cont1"><img src="images/f4.png"></div>
+                <div class="cont1"><img src="images/f5.png"></div>
+                <div class="cont1"><img src="images/f6.png"></div>
+                <div class="cont1"><img src="images/f7.png"></div>
+             </div>
+             <div>
+                <h2>Best In Sports</h2>
+                <div class="cont2"><img src="images/s8.png" ></div>
+                <div class="cont2"><img src="images/s9.png"></div>
+                <div class="cont2"><img src="images/s10.png"></div>
+                <div class="cont2"><img src="images/s11.png"></div>
+                <div class="cont2"><img src="images/s12.png"></div>
+             </div>
+             <div>
+                <h2>Hotstar Specials -First Episode Free</h2>
+                <div class="cont2"><img src="images/h1.png" ></div>
+                <div class="cont2"><img src="images/h2.png"></div>
+                <div class="cont2"><img src="images/h3.png"></div>
+                <div class="cont2"><img src="images/h4.png"></div>
+                <div class="cont2"><img src="images/h5.png"></div>
+             </div>
+             <div>
+                <h2>Best Of Foriegn Shows Dubbed</h2>
+                <div class="cont1"><img src="images/f8.png"></div>
+                <div class="cont1"><img src="images/f9.png"></div>
+                <div class="cont1"><img src="images/f10.png"></div>
+                <div class="cont1"><img src="images/f11.png" ></div>
+                <div class="cont1"><img src="images/f12.png"></div>
+                <div class="cont1"><img src="images/f13.png"></div>
+                <div class="cont1"><img src="images/f14.png"></div><br>
+             </div>
+             
+             <div>
+               
+                <div class="cont3"><img src="images/f15.png" class="img-v"><video src="videos/disney.mp4" mute loop class="video"></video></div>
+                <div class="cont3"><img src="images/f16.png" class="img-v"><video src="videos/pixar.mp4" mute loop class="video"></video></div>
+                <div class="cont3"><img src="images/f17.png" class="img-v"><video src="videos/marvel.mp4" mute loop class="video"></video></div>
+                <div class="cont3"><img src="images/f18.png" class="img-v"><video src="videos/star-war.mp4" mute loop class="video"></video></div>
+                <div class="cont3"><img src="images/f19.png" class="img-v"><video src="videos/pixar.mp4" mute loop class="video"></video></div>
+                <div class="cont3"><img src="images/f20.png" class="img-v"><video src="videos/geographic.mp4" mute loop class="video"></video></div>
+             </div>
+             <div>
+                <h2>Popular Genres</h2>
+                <div class="cont4"><img src="images/v1.png" ></div>
+                <div class="cont4"><img src="images/v2.png"></div>
+                <div class="cont4"><img src="images/v3.png"></div>
+                <div class="cont4"><img src="images/v4.png"></div>
+                <div class="cont4"><img src="images/v5.png"></div>
+             </div>
+             <div>
+                <h2></h2>
+                <div class="cont5"></div>
+                <div class="cont5"></div>
+                <div class="cont5"></div>
+                <div class="cont5"></div>
+             </div>
+             <div>
+                <h2></h2>
+                <div class="cont5"><h2>Company</h2><br>
+                  <p>About Us</p><br>
+                  <p>Careers</p>
+                  <br><br>
+                  <p>© 2023 STAR.All Rights Reserved.<br>
+                  Terms Of Use.  Privacy Policy   FAQ</p><br>
+                </div>
+            </div>
+                <div class="cont5"><h2>View Website IN</h2>
+                  <br><p>✓  English</p><br>
+                </div>
+                <div class="cont5"><h2>Need Help?</h2>
+                  <br><p>Visit Help Center</p><br>
+                  <p>Share Feedback</p>
+                  <br><br>
+                  <p></p><br></div>
+                <div class="cont5"><h2>Contact With Us</h2>
+                  <br><p></p><br>
+             </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
